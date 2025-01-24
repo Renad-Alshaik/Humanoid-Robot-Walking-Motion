@@ -34,3 +34,31 @@ Move the swing leg forward using the planned trajectory.
 Lower the swing foot to the ground, ensuring contact is made with the sole sensors.
 - Repeat for the Other Leg:
 Shift the CoM to the newly planted foot and repeat the cycle.
+
+Step 4: Maintain Balance
+- Real-Time Sensor Feedback:
+Continuously monitor gyroscope and accelerometer data for stability.
+Adjust joint angles dynamically to counteract any imbalance.
+- Ground Reaction Forces:
+Use foot pressure sensors to ensure equal weight distribution during stance.
+- Adjust Trajectory:
+If sensors detect instability, modify the swing leg trajectory or CoM shift
+
+Step 5: Handle Turning and Stopping
+- Turning:
+Adjust the step direction by modifying the swing leg trajectory.
+Ensure the CoM shift compensates for the change in direction.
+- Stopping:
+Gradually reduce the stride length and step height.
+Bring both feet back to a balanced standing position.
+
+Step 6: Error Handling
+- Monitor Stability:
+If the robot tilts beyond a threshold, stop the motion and reposition the legs for balance.
+- Fall Detection:
+Detect a fall using accelerometer data and initiate a recovery mechanism.
+
+Step 7: Iteration
+- Loop:
+Continue the walking cycle until a stop command is issued.
+Periodically update gait parameters based on terrain feedback (e.g., incline, uneven surface)
